@@ -11,9 +11,10 @@
        FIN SI
        contador ← contador+1
    FIN MIENTRAS
-5. Mostrar "Pares encontrados: " y totalPares
-6. i ← 0
-7. MIENTRAS i < totalPares HACER
+5. Mostrar "Pares encontrados: " + totalPares
+6. Mostrar "Valores:"
+7. i ← 0
+8. MIENTRAS i < totalPares HACER
        Mostrar pares[i]
        i ← i+1
    FIN MIENTRAS

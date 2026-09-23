@@ -1,39 +1,39 @@
 # Práctica 2: Guardar los números pares
 ## 1. Descripción del problema (Fase 1)
 <!-- Explica con tus palabras qué hace tu programa y para qué serviría en la vida real. Máximo 4 líneas. -->
-
+Tiene que recibir números para detectar cuales son pares, si son pares los va guardando para después mostrarte el cuantos y cuales pares se guardaron, se puede usar para series de números muy extensas y saber cuales son pares y cuales no
 _____
 
 ## 2. Entradas y salidas (Fase 1)
 <!-- Define cada entrada y cada salida, con su tipo de dato y su objetivo. -->
 
 **Entradas:**
-1. _____
+1. 5 números
 
 **Salidas:**
-1. _____
-2. _____
+1. cantidad de pares
+2. cuales son los pares
 
 ## 3. Restricciones e invariante (Fase 1 y 2)
 
 **Restricciones** (¿qué debe cumplirse?):
-- _____
-- _____
+- Solo reflejar números pares
+- No aceptar decimales
 
 **Tamaño del arreglo y por qué** (piensa en el peor caso):
-_____
+5 casillas del arreglo, tiene que ser del 0-4 y maximo tener 5 pares
 
 **¿El 0 y los negativos son pares? ¿Por qué?**
-_____
+Sí, porque no tienen residuo al dividirlo entre 2
 
 **Invariante** (¿qué es verdad después de cada vuelta del ciclo?):
-_____
+Se suma 1 en el contador y se pide el siguiente número
 
 ## 4. Casos resueltos a mano (Fase 1)
 
 | Caso | Números | Pares guardados | Posición de cada par |
 |---|---|---|---|
-| 1 | 3, 8, 5, 2, 7 | _____ | _____ |
+| 1 | 3, 8, 5, 2, 7 | __ | _____ |
 | 2 | _____ | _____ | _____ |
 | 3 | _____ | _____ | _____ |
 
