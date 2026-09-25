@@ -3,7 +3,7 @@
 
 // ¿Por qué este include usa comillas y no < >?
 #include "utilerias.h"
-+using namespace std;
+using namespace std;
 
 // ¿por qué debe existir la función main()?
 int main() {
@@ -23,12 +23,26 @@ int main() {
     //    TODO: lee cada número con leerEntero("Escribe un numero: ")
     //    TODO: si el número es par, guárdalo en la siguiente posición libre
     //    ¿Qué variable te dice cuál es la siguiente posición libre?
-    while ()
+    while (contador < CANTIDAD) {
+        int numero = leerEntero("Ingresa un número entero: ");
+        if (numero%2 == 0) {
+            pares[totalPares] = numero;
+            totalPares = totalPares + 1;
+        }
+        
+        contador = contador + 1;
+    }
 
     // 4. Salida
     //    TODO: muestra cuántos pares se guardaron
     //    TODO: recorre el arreglo e imprime cada par
     //    ¿Hasta qué posición debes llegar?
+    std::cout <<"Pares encontrados: " << totalPares << "\n";
+    int i = 0;
+    while (i < totalPares) {
+        std::cout << "Mostrar pares: " << pares[i] << "\n";
+        i = i + 1;
+    }
 
     // ¿Qué significa return 0;?
     return 0;
