@@ -33,15 +33,15 @@ Se suma 1 en el contador y se pide el siguiente número
 
 | Caso | Números | Pares guardados | Posición de cada par |
 |---|---|---|---|
-| 1 | 3, 8, 5, 2, 7 | __ | _____ |
-| 2 | _____ | _____ | _____ |
-| 3 | _____ | _____ | _____ |
+| 1 | 3, 8, 5, 2, 7 | 8, 2 | 0, 1 |
+| 2 | 6, 7, 2, 3, 24 | 6, 2, 24 | 0, 1, 2 |
+| 3 | -6, 0, 87, -62, 23 | -6, 0, -62 | 0, 1, 2 |
 
 ## 5. Receta en pseudocódigo (Fase 2)
 <!-- Tu receta va en el archivo RECETA.md. Aquí solo responde las dos preguntas. -->
 
-**¿Probé mi receta a mano con un caso?** Sí / No
-**¿Tuve que corregirla?** _____
+**¿Probé mi receta a mano con un caso?** Sí 
+**¿Tuve que corregirla?** Sí
 
 ## 6. Cómo compilar y ejecutar (Fase 3)
 
@@ -53,37 +53,50 @@ g++ -Wall -Wextra -std=c++17 main.cpp -o numeros_pares
 ## 7. Ejemplo de ejecución (Fase 3)
 <!-- Pega aquí lo que muestra tu programa en pantalla con un caso normal. -->
 
-```
+Guardar los numeros pares de 5 numeros
+Ingresa un n├║mero entero: -6
+Ingresa un n├║mero entero: 0
+Ingresa un n├║mero entero: 87
+Ingresa un n├║mero entero: -62
+Ingresa un n├║mero entero: 23
+Pares encontrados: 3
+Mostrar pares: -6
+Mostrar pares: 0
+Mostrar pares: -62
 _____
 ```
 
 ## 8. Experimentos (Fase 3)
 
 **Experimento A: ¿qué apareció al imprimir las 5 posiciones del arreglo? ¿Por qué?**
-_____
+Pares encontrados: 5
+Mostrar pares: 0
+Mostrar pares: 2
+Mostrar pares: 4
+Mostrar pares: 6
+Mostrar pares: 8
 
 **Experimento B: ¿qué pasó al usar la variable del ciclo como posición del arreglo? ¿Por qué?**
-_____
+Se guardan los números en diferentes posiciones, entonces se guardan tanto para par como impar
 
 ## 9. Tabla de pruebas (Fase 4)
 
 | Caso | Números | Esperado | Obtenido | ¿Pasó? |
 |---|---|---|---|---|
-| Mezcla | 1, 2, 3, 4, 5 | 2 pares: 2, 4 | _____ | _____ |
-| Posiciones distintas | 3, 8, 5, 2, 7 | 2 pares: 8, 2 | _____ | _____ |
-| Todos pares | 2, 4, 6, 8, 10 | 5 pares | _____ | _____ |
-| Todos impares | 1, 3, 5, 7, 9 | 0 pares | _____ | _____ |
-| Con cero y negativos | 0, -3, -4, 7, 1 | 2 pares: 0, -4 | _____ | _____ |
-| Entrada inválida | `hola` o `3.5` | vuelve a pedir | _____ | _____ |
-| Caso propio 1 | _____ | _____ | _____ | _____ |
-| Caso propio 2 | _____ | _____ | _____ | _____ |
+| Mezcla | 1, 2, 3, 4, 5 | 2 pares: 2, 4 | 2 pares: 2, 4 | Sí |
+| Posiciones distintas | 3, 8, 5, 2, 7 | 2 pares: 8, 2 | 2 pares: 8, 2 | Sí |
+| Todos pares | 2, 4, 6, 8, 10 | 5 pares | 5 pares | Sí |
+| Todos impares | 1, 3, 5, 7, 9 | 0 pares | 0 pares | Sí |
+| Con cero y negativos | 0, -3, -4, 7, 1 | 2 pares: 0, -4 | 2 pares: 0, -4 | Sí |
+| Entrada inválida | `hola` o `3.5` | vuelve a pedir | Entrada no válida. Escribe un número entero | Sí |
+| Caso propio 1 | -4, -2, 0, 2, 4 | 5 pares | 5 pares | Sí |
+| Caso propio 2 | 31, 25, 10, 2, -88 | 3 pares: 10, 2, -88 | 3 pares: 10, 2, -88 | Sí |
 
 ## 10. Bitácora de mejoras (Fase 4)
 
 | # | ¿Qué falló o qué quise mejorar? | ¿Qué cambié? | ¿Funcionó? |
 |---|---|---|---|
-| 1 | _____ | _____ | _____ |
-| 2 | _____ | _____ | _____ |
+| 1 | el mensaje "Pares encontrados" y "Mostrar pares" salía seguido | Agregué el código << "\n" después del mensaje pero antes de saltar línea | Sí |
 
 **Reto elegido (opcional):** _____
 
@@ -91,32 +104,32 @@ _____
 
 | Duda | Lo que ya intenté |
 |---|---|
-| _____ | _____ |
+| De momento nada | _____ |
 
 ## 12. Reflexión final
 
 **¿Qué aprendí con esta práctica?**
-_____
+A seguir practicando el uso de while, if, std cout y las variables
 
 **Ahora que terminé, ¿qué cambiaría de mi proceso?**
-_____
+Nada
 
 **¿Qué fue lo más difícil y cómo lo resolví?**
-_____
+El usar leerEntero y lo resolví con ayuda de ia con preguntas y pistas
 
 **¿Qué pregunta me quedó sin responder?**
-_____
+Ninguna
 
 **¿Por qué no puedo usar la variable del ciclo para guardar en el arreglo?**
-_____
+Porque esa cuenta todos los números y el arreglo solo los pares
 
 ## 13. Lista de verificación antes de entregar (Fase 5)
 
-- [ ] Llené todas las secciones (no quedan `_____`)
-- [ ] Mi programa compila sin advertencias
-- [ ] Probé todos los casos de la tabla
-- [ ] Hice los Experimentos A y B y dejé el código correcto al terminar
-- [ ] No modifiqué `utilerias.h`
-- [ ] Hice al menos 3 commits con mensajes claros
-- [ ] Hice `git push` y verifiqué mi fork en GitHub
-- [ ] Entregué el enlace de mi fork en Classroom
+- [Sí] Llené todas las secciones (no quedan `_____`)
+- [Sí] Mi programa compila sin advertencias
+- [Sí] Probé todos los casos de la tabla
+- [Sí] Hice los Experimentos A y B y dejé el código correcto al terminar
+- [Sí] No modifiqué `utilerias.h`
+- [Sí] Hice al menos 3 commits con mensajes claros
+- [Sí] Hice `git push` y verifiqué mi fork en GitHub
+- [Sí] Entregué el enlace de mi fork en Classroom
